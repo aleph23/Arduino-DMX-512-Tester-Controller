@@ -3,45 +3,76 @@
 **Notas sobre la versión**
 
 **Compilado en Arduino IDE v1.0.6**
-- instalar la libreria DMX manualmente, dejar solo carpeta DMX
+- instalar la librería DMX manualmente, dejar solo carpeta DMX
 
 ***
 
 **vx.x - Beta**
-- AGREGAR   - editor de secuencias con canales y valores especificos
+- AGREGAR   - editor de secuencias con canales y valores específicos
 - AGREGAR   - al editor de secuencias fade y tiempo de comando dmx entre ciclos
 
 ***
 
 **vx.x - Beta - TOUCH**
-- AGREGADO 	- Implementacion de Adafruit Resistive Touch Screen Controller 	- STMPE610 PID: 1571
-- AGREGADO 	- Implementacion de Adafruit 3.5" TFT 320x480 + Touchscreen Breakout Board w/MicroSD Socket - HXD8357D PID: 2050
-- AGREGADO 	- Debbugger al arranque con informacion de estado de dispositivos
-- AGREGADO 	- Funcion de calibracion para touch
-- AGREGADO 	- Funcion para borrar el buffer del touch
-- AGREGADO 	- calibracion de touch, obtencion de datos completa
+- AGREGADO 	- Implementation de Adafruit Resistive Touch Screen Controller 	- STMPE610 PID: 1571
+- AGREGADO 	- Implementation de Adafruit 3.5" TFT 320x480 + Touchscreen Breakout Board w/MicroSD Socket - HXD8357D PID: 2050
+- AGREGADO 	- Debbugger al arranque con información de estado de dispositivos
+- AGREGADO 	- Función de calibración para touch
+- AGREGADO 	- Función para borrar el buffer del touch
+- AGREGADO 	- calibración de touch, obtención de datos completa
 
 ***
+**v1.9 - stable - Hardware v0.7**
+- PENDIENTE - funciones en teclado back light, agregar a lectura numerito write
+- AGREGADO  - modelo de programación de LCD - Encoder - keypad
+	https://github.com/daniel3514/Arduino-LCD-Encoder-KeyPad-Examples/tree/master/Examples/LCD%20-%20Encoder%20-%20Key%20Pad/v0.0
+- AGREGADO  - canal actual a eeprom
+- AGREGADO  - canal actual salvar en eeprom cuando se sale de algún control
+- AGREGADO  - Control Unit, función para escribir valores repetidos en la matriz, ejemplo si hay dos unos ambos se actualizan
+- AGREGADO  - Control Matrix, Ubicar, valor anterior al final
+- AGREGADO  - Control Matrix, ubicar a inicial y final
+- AGREGADO  - Control Matrix, mostrar canal a inicial y final
+- CORREGIDO - menu, memoria, cambio de orden de items
+- CORREGIDO - menu, Config, limites y vista
+- CORREGIDO - Control Unitary, rediseño de GUI
+- AGREGADO  - Control Unitary, 8 unitarios distintos no consecutivos
+- AGREGADO  - Convert, opción de ubicar canal
+- CORREGIDO - Convert, rediseño de interface gráfica
+- CORREGIDO - Convert, modelo de navegación de binarios
+- PENDIENTE - Convert, cambiar cursor de navegación de binarios
+- CORREGIDO - Control Chaser, rediseño de interface gráfica
+- AGREGADO  - Control Chaser. canal actual como first
+- AGREGADO  - Control Chaser, canal actual inicia encendido
+- AGREGADO  - Control Chaser, repasar canales desde encoder
+- CORREGIDO - Control Secuencer, rediseño de GUI
+- CORREGIDO - Config, la ventana de acción del contraste se queda en los limites de 0 a 255
+- AGREGADO  - Secuencer, el universo inicial siempre es 1
+- PENDIENTE - sacar numérico write y remplazar por numérico print
+- AGREGADO  - Multiply, valores preestablecidos 
 
-**v1.8 - beta - Hardware v0.6**
+**v1.8 - beta - Hardware v0.7**
 - CORREGIDO - Pin Out para version de hardware
 - CORREGIDO - Pin encoder center al 6
-- CORREGIR  - Quitar la programacion del potenciometro
-- CORREGIR  - Quitar la programacion de los cursores
+- CORREGIR  - Quitar la programación del potenciometro
+- CORREGIR  - Quitar la programación de los cursores
 - CORREGIR  - pin 6 de encoder center a pull up
 - CORREGIR  - pin key light a 11
 - CORREGIR  - pin contraste a 12
 - CORREGIR  - cambiar delay por interrupciones de timer
-- AGREGAR 	- en multiplicador, el valor en tiempo real desde el potenciometro o teclado
-- AGREGAR 	- control chaser desde el potenciometro, al girar recorre los canales
+- AGREGAR   - en multiplicador, el valor en tiempo real desde el potenciometro o teclado
+- AGREGAR   - control chaser desde el potenciometro, al girar recorre los canales
 - AGREGAR   - EEPROM Default en pin 9 como pullup
-- AGREGAR 	- dimmer para luz led como lampara en pin 10
+- AGREGAR   - dimmer para luz led como lampara en pin 10
+- AGREGADO  - a EEPROM, espacio para Ext Light
+- AGREGADO  - función para jumper de eeprom default
+- AGREGADO  - dimmer de pantalla al inicio
+- AGREGADO  - indices a posiciones de LCD en el excel
 
 ***
 
 **v1.7 - Stable - Hardware v0.3 - v0.5**
-- CORREGIDO - se separa la lectura desde el encoder como funcion
-- CORREGIDO - en analogo read "a" cambia por encoder read "e"
+- CORREGIDO - se separa la lectura desde el encoder como función
+- CORREGIDO - en analogy read "a" cambia por encoder read "e"
 - AGREGADO  - control desde encoder a value de dmx
 - AGREGADO  - control desde encoder a config contraste 
 - AGREGADO  - control desde encoder a config backlight
@@ -51,18 +82,18 @@
 
 **v1.6 - Stable - Hardware v0.3 - v0.5**
 - CORREGIDO - se agrega un encoder KEYES Rotary encoder module KY-040 para remplazar el potenciometro
-- AGREGADO  - el boton del centro es el mismo del encoder
+- AGREGADO  - el botón del centro es el mismo del encoder
 - AGREGADO  - encoder CLK en 6 DT en 7
 - CORREGIDO - el pin del potenciometro se elimina
 - AGREGADO  - encoder library - https://www.pjrc.com/teensy/td_libs_Encoder.html
-- CORREGIDO - lectura analoga de valor, se agrega el valor anterior en la escritura del LCD
-- CORREGIDO - lectura analoga en valor el cursor blink se queda en la "a" y no sobre el numero
+- CORREGIDO - lectura análoga de valor, se agrega el valor anterior en la escritura del LCD
+- CORREGIDO - lectura análoga en valor el cursor blink se queda en la "a" y no sobre el numero
 
 ***
 
 **v1.5 - Stable - Hardware v0.3 - v0.4**
 - Ultima version con potenciometro
-- CORREGIDO - el cursor en el analogo se mostraba el blink fuera del numero y se ensimaba
+- CORREGIDO - el cursor en el análogo se mostraba el blink fuera del numero y se encimaba
 
 ***
 
@@ -76,15 +107,15 @@
 - CORREGIDO - en control multiply Ctrl por Exit
 - CORREGIDO - en control options se quito la leyenda Control:
 - AGREGADO  - Convert, convierte entre binario y decimal para address dip switch
-- AGREGADO  - a control options la opcion Convert
-- AGREGADO  - a Convert binario a decimal boton de centro para salir, boton de lados para navegar, boton arriba abajo para cambiar valor
+- AGREGADO  - a control options la opción Convert
+- AGREGADO  - a Convert binario a decimal botón de centro para salir, botón de lados para navegar, botón arriba abajo para cambiar valor
 
 ***
 
 **v1.3 - Stable - Hardware v0.3 - v0.4**
 - CORREGIR  - en control matrix cuando se selecciona un canal de la esquina el cursor parpadeando queda fuera de lugar
 - AGREGADO  - Control de iluminacion para teclado
-- AGREGADO  - a EEPROM la posicion 4092 para guardar key light
+- AGREGADO  - a EEPROM la posición 4092 para guardar key light
 - AGREGADO  - la variable global int EEPROM_Limit para controlar el limite de escritura de eeprom de universos
 - AGREGADO  - EEPROM_Limit a todas las funciones de memoria EEPROM
 - AGREGADO  - el control * en el teclado controla el back light y el key light 
@@ -98,7 +129,7 @@
 ***
 
 **v1.2 - Stable - Hardware v0.3 - v0.4**
-- AGREGADO  - al arranque toma el banco de la eeprom previamente elejido desde config
+- AGREGADO  - al arranque toma el banco de la eeprom previamente elegido desde config
 - AGREGADO  - a config el banco que lee a arranque
 - AGREGADO  - al about el banco actual
 - AGREGADO  - a about reacomodo de datos
@@ -110,9 +141,9 @@
 - AGREGADO  - a EEPROM Save el limite en bank 8 de 4092
 - CORREGIDO - GUI Config de LCD config solo a config
 - CORREGIDO - GUI Config de Control a exit
-- AGREGADO  - a GUI Config opcion bank init
-- AGREGADO  - EEPROM_Load_Init para cargar el universo precnfigurado al inicio
-- CORREGIDO - GUI about cambio de disposicion y url por wiki
+- AGREGADO  - a GUI Config opción bank init
+- AGREGADO  - EEPROM_Load_Init para cargar el universo preconfigurado al inicio
+- CORREGIDO - GUI about cambio de disposición y url por wiki
 - AGREGADO  - GUI_Licence a cofig
 
 ***
@@ -120,7 +151,7 @@
 **v1.1 - Beta - Hardware v0.3 - v0.4**
 - AGREGADO  - memory a control options
 - AGREGADO  - a memory gui ClearAll para borrar todos los bancos de la eeprom
-- AGREGADO  - a memory gui reacomodo de menues
+- AGREGADO  - a memory gui reacomodo de menus
 
 ***
 
@@ -133,7 +164,7 @@
 - CORREGIDO - manejo de memoria EEPROM al guardar y leer el conteo es en 1 y no en 0
 - CORREGIDO - GUI_Chasser el cursor blink no se mostraba después de stop 
 - CORREGIDO - GUI_Control_Options, el cursor no se mostraba en unitary
-- CORREGIDO - disminucion de tiempo mensaje final de opciones de acceso a eeprom
+- CORREGIDO - disminución de tiempo mensaje final de opciones de acceso a eeprom
 - AGREGADO  - lectura de botón "center" en el about
 - AGREGADO  - a GUI_Secuencer límite de delay a 100
 - AGREGADO  - a GUI_Secuencer en la salida a control regresa al dmx los datos desde la ram

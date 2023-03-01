@@ -18,7 +18,6 @@ Basado en:
 * [Arduino Mega 2560 Rev-3](http://www.arduino.cc/en/Main/ArduinoBoardMega2560)
 * [Librería Arduino cuatro universos DMX v0.3 - Deskontrol](http://www.deskontrol.net/blog/libreria-arduino-cuatro-universos-dmx/)
 * [Libreria LCD v1.2.1 - Francisco Malpartida](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
-* [Simulacion de Arduino desde Proteus - Microcontrolandos](http://microcontrolandos.blogspot.mx/2012/12/arduino-componentes-para-o-proteus.html)
 
 ***
 ### Hardware v0.4
@@ -37,29 +36,62 @@ Basado en:
 
 ***
 
-### Firmware v1.2
+### Firmware v1.9
 
 [Notas sobre la versión...](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/Documentacion/Firmware%20-%20Notas%20Sobre%20la%20Version.md)
-* Compatible con Hardware v0.3 - v0.4
-* Navegación desde cursor de fácil acceso e intuitivo
-* Inserción rápida de valores desde el teclado numérico
-* Inserción de valores desde potenciometro análogo
-* Bancos de memoria para almacenar 8 universos DMX
-* Lectura desde la EEPROM al arranque de universo DMX preseleccionado
-* Seleccion de opciones de memoria al arranque 
-* Control DMX Unitary, permite seleccionar un canal especifico, ademas de mostrar los valores de los canales anterior y siguiente
-* Control DMX Matrix, muestra una matriz de 3 x 5 con los valores de los canales mostrados
-* Control DMX Chaser, permite secuenciar canales seleccionados, con un tiempo seleccionado
-* Control DMX Secuencer, permite secuenciar entre los universos guardados en la memoria EEPROM con un tiempo seleccionado
-* Control DMX Multiply, permite llenar valores multiplicando los canales seleccionados
+
+* Compatible con Hardware v0.7
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Initial.PNG)
+
+* Navegación desde encoder de fácil acceso e intuitivo
+* Inserción rápida de valores desde el teclado numérico y encoder
 * Función para ubicar luminaria desde el canal seleccionado
-* Acceso rápido a opciones de memoria
-* Opciones de memoria Save, Load, Clear, Clear All (para los bancos de memoria y empty RAM
-* Opciones de memoria para los 8 bancos de universos DMX
-* Función de Black Out
-* Control de iluminación de LCD back light
-* Control de contraste de LCD
-* Acceso rápido desde el teclado LCD back light
+* Arranque con universo DMX preseleccionado
+* Seleccion de opciones de memoria al arranque 
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Initial%20Memory.PNG)
+
+* Menu para seleccionar modos de control, configuraciones y herramientas
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Options.PNG)
+
+* Control DMX Unitary, permite seleccionar 8 canales especificos ademas de mostrar el valor actual
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Control%20Unitary.PNG)
+
+* Control DMX Matrix, muestra una matriz de 3 x 5 con los valores de los canales mostrados, canal inicial y final seleccionable
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Control%20Matrix.PNG)
+
+* Control DMX Chaser, permite secuenciar canales de forma automatica, el canal inicial, canal final y tiempo son seleccionables, permite secuenciar canales manualmente desde el encoder
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Control%20Chaser.PNG)
+
+* Control DMX Secuencer, permite secuenciar entre los universos guardados en la memoria EEPROM con un tiempo seleccionado
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Control%20Secuencer.PNG)
+
+* Control DMX Multiply, permite llenar valores multiplicando los canales seleccionados
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Control%20Multiply.PNG)
+
+* Convert, permite convertir entre numeros decimales y binarios que representan los sistemas con dip switch
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Convert.PNG)
+
+* Memory, opciones de memoria EEPROM y RAM, accesible desde cualquier control
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Memory.PNG)
+
+* 8 Bancos de memoria para almacenar, cargar y borrar los valores actuales, accesible desde el memu Memory
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Memory%20Bank.PNG)
+
+* Config, permite asignar el valor del Backlight, Key Light, Contraste y Bank Init
+
+![](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/blob/master/Firmware/v1.9/LCD%20media/Config.PNG)
+
 * Compilado en [Arduino IDE v1.0.6](http://www.arduino.cc/en/Main/OldSoftwareReleases)
 * Librería Arduino cuatro universos DMX v0.3 - [Deskontrol.net](http://www.deskontrol.net/blog/libreria-arduino-cuatro-universos-dmx/)
 * Libreria LCD v1.2.1 - [Francisco Malpartida](https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home)
@@ -82,7 +114,7 @@ Basado en:
 * Las versiones del Simulador estan numeradas de manera consecutiva
 
 [Social](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/tree/master/Social)
-* El archivo "Publicados.txt" contiene la informacion de la actividad en Webs, Blogs y Redes Sociales
+* Contiene la informacion de la actividad en Webs, Blogs y Redes Sociales
 
 [Software](https://github.com/daniel3514/Arduino-DMX-512-Tester-Controller/tree/master/Software)
 * Contiene el software utilizado para el proyecto
